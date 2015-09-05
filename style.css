@@ -1,0 +1,91 @@
+html,
+body,
+div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body {
+	background: #2E3042;
+}
+.wrap {
+	width: 30%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: visible;
+}
+svg {
+	width: 100%;
+	height: auto;
+	overflow: visible;
+}
+.do,
+.work,
+.fool {
+	fill: #188EB0;
+}
+.some {
+	fill: #E87A82;
+}
+
+.do,
+.some,
+.work {
+	opacity: 0;
+	transform: translateY(40px);
+	animation: initA 0.4s ease-out;
+	animation-fill-mode: forwards;
+}
+.fool {
+	opacity: 0;
+	transform: translateX(-100px);
+	animation: initB 1.2s cubic-bezier(.13,.54,.13,1);
+	animation-fill-mode: forwards;
+}
+
+.some {
+	animation-delay: 0.08s;
+}
+.work {
+	animation-delay: 0.16s;
+}
+
+.fool.f {
+	animation-delay: 0.3s;
+}
+.fool.o1 {
+	animation-delay: 0.35s;
+}
+.fool.o2 {
+	animation-delay: 0.4s;
+}
+.fool.l {
+	animation-delay: 0.45s;
+}
+
+@keyframes initA {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes initB {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
